@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --experimental-vm-modules node_modules/.bin/jest --detectOpenHandles",
     "start": "nodemon index.js"
   },
   "repository": {
@@ -22,8 +22,9 @@
     "express": "^4.17.1"
   },
   "devDependencies": {
-    "axios": "^0.21.4",
-    "nodemon": "^2.0.13"
+    "jest": "^27.2.3",
+    "nodemon": "^2.0.13",
+    "supertest": "^6.1.6"
   },
   "type": "module"
 }

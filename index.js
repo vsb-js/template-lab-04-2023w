@@ -1,7 +1,13 @@
+
 import express from 'express'
+import fs from 'fs/promises'
 const app = express()
 const port = 3000
 
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+const task1Object = { firsname: "Obiwan", lastname: "Kenobi", home: "Tattoine" }
 
 // this is the simpliest example - if you go to the localhost:3000, if show you "Hello world"
 app.get('/', (req, res) => {
@@ -21,15 +27,16 @@ app.get('/', (req, res) => {
 
 // TASK 3. GET request /vehicles/id-of-vehicle and return whole object for specific vehicle
 // request /vehicles/1 return object for Sand Crawler
+// if you call for /vehicles/100 (this ID is not in vehicles.json), return { error: "We don't have vehicle with that ID"}
 // only one function here! Not for each vehicle!
 // Hint: See route parameters in https://expressjs.com/en/guide/routing.html
 
 
 // TASK 4. POST request /secret-code 
-// If you send POST params password: 2021-09-29-emperor-is-awesome   //(today in format YYYY-MM-DD-emperor-is-awesome)
+// If you send POST params password: {password: "2021-9-29-emperor-is-awesome"}   //(today in format YYYY-MM-DD-emperor-is-awesome)
 // page should return text: "Your access is granted!" 
 // if password is wrong, it should return "Please send valid password or we are forced to destroy your ship."
-// Password is changed every day - for tomorrow it is 2021-09-30-emperor-is-awesome
+// Password is changed every day - for tomorrow it is 2021-9-30-emperor-is-awesome
 // Hint: Current date - many ways https://stackoverflow.com/questions/1531093/how-do-i-get-the-current-date-in-javascript
 
 
@@ -38,3 +45,5 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
+
+export { app, task1Object };
