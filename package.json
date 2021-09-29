@@ -1,0 +1,29 @@
+{
+  "name": "lab-05",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsb-js/lab-05.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vsb-js/lab-05/issues"
+  },
+  "homepage": "https://github.com/vsb-js/lab-05#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "axios": "^0.21.4",
+    "nodemon": "^2.0.13"
+  },
+  "type": "module"
+}
