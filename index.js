@@ -9,12 +9,12 @@ app.get('/', (req, res) => {
 })
 
 //  TASK 1. GET request /testing-json and return JSON - simple object with your name, lastname, home
-// return something like { firsname: "Obiwan", lastname: "Kenobi", home: "Tattoine"}
+// return something like { firstname: "Obiwan", lastname: "Kenobi", home: "Tattoine"}
 // Hint: For JSON response see Response methods https://expressjs.com/en/guide/routing.html
 
 
 // TASK 2. GET request /vehicles and return array of simple objects of vehicles in JSON format.
-// USE vehicles.json file.
+// USE vehicles.json file. You have to do transformation of the loaded json file. Remove the extra fields!
 // return [{id: 1, name: "Sand Crawler"}, {id: 2, name: "T-16 skyhopper"}, ...]
 // Hint: See presentation 5, slide ~13? how to use async await and read file ... 
 
