@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --detectOpenHandles",
-    "start": "PORT=3300 nodemon index.js"
+    "test-simple": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --detectOpenHandles -t '/testing-json'",
+    "test-get": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --detectOpenHandles -t 'GET'",
+    "test-post": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js --detectOpenHandles -t 'POST'",
+    "start": "PORT=3000 nodemon index.js"
   },
   "repository": {
     "type": "git",
