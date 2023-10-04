@@ -9,5 +9,8 @@ Or you can run `npm start`, obeserve the command nodemon in the package.json for
 
 You can check that you have correct code by running command `npm run test` and scroll trough the results. 
 
+## Grading
+This lab is using autograding feature. The grading is the same as with running `npm test`. In case you think there is an issue with it. Let us know. 
+
 ## Bonus
 You can do bonus.js for 1 extra point.
